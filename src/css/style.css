@@ -1,3 +1,4 @@
+@import url(efeitos.css);
 * {
     margin: 0;
     padding: 0;
@@ -9,28 +10,44 @@ body {
 }
 
 header {
-    align-items: center;
-    background-color: #722F37;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #722F37;
     color: white;
     padding: 20px;
-    justify-content:space-between ;
 }
-header nav ul{
+
+header nav ul {
+    display: flex;
     gap: 20px;
     list-style: none;
-    display: flex;
+    margin: 0;
+    padding: 0;
 }
-header nav ul li a{
+
+header nav ul li a {
     font-weight: 600;
     text-decoration: none;
     color: white;
     padding: 5px 10px;
-    float: right;
+    display: inline-block;
+    transition: all 0.2s ease;
 }
-header nav ul li a:hover{
+/* Efeito hover */
+header nav ul li a:hover {
     text-decoration: underline 2px white;
-} 
+    animation: aumentar 0.4s ease-in-out;
+}
+
+/* Efeito de clique (active)*/
+header nav ul li a:active {
+    transform: scale(0.92) translateY(2px); 
+    background-color: rgba(255, 255, 255, 0.15); 
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4); 
+    border-radius: 5px;
+}
+
 .centralizar {
     display: flex;
     justify-content: center;
@@ -83,69 +100,96 @@ h1 {
             text-align: center;
         }
 footer {
-            background-color: #2c2c2c;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+    background-color: #2c2c2c;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-        footer section {
+footer section {
+    justify-content: center;
+    flex: 1;
+    margin: 1px;
+    min-width: 250px;
+}
 
-            justify-content: center;
-            flex: 1;
-            margin: 1px;
-            min-width: 250px;
-            
-        }
-        footer .contato{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+footer .contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        }
+footer h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
 
-        footer h2 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
+footer p {
+    margin: 5px 0;
+}
 
-        footer p {
-            margin: 5px 0;
-        }
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+form label {
+    margin: 5px 0 2px;
+}
 
-        form label {
-            margin: 5px 0 2px;
-        }
+form input,
+form textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #555; 
+    border-radius: 4px;
+    width: 50%;
+    transition: all 0.2s ease;
+}
 
-        form input, form textarea {
-            padding: 8px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 4px;
-            width: 50%;
-        }
+/* utilização do pseudo-classe :focus*/
+form input:focus,
+form textarea:focus {
+    outline: none; 
+    border: 3px solid #f5c16c;
+    background-color: #fff8dc;
+    box-shadow: 0 0 15px #f5c16c, 0 0 25px #f5c16c inset;
+    animation: pulsar 0.8s ease-in-out infinite alternate;
+}
 
-        form button {
-            background-color: #8b0000;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 50%;
-        }
+form button {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    transition: all 0.2s ease;
+}
 
-        form button:hover {
-            background-color: #a80000;
-        }
+/*  Hover do botão */
+form button:hover {
+    background-color: #a52a2a;
+}
+
+/*  Focus do botão */
+form button:focus {
+    outline: none;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #f5c16c, 0 0 30px #f5c16c inset;
+    animation: pulsar 0.8s ease-in-out infinite alternate;
+}
+
+/*  Active do botão (quando clicado) */
+form button:active {
+    transform: scale(0.95);
+    background-color: #a52a2a;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+}
 
         .copy {
             text-align: center;
@@ -157,7 +201,7 @@ footer {
         h2{
     text-align: center;
     font-family: 'Arial', sans-serif;
-    padding: 40px 20px 20px 20px; /* topo, direita, baixo, esquerda */
+    padding: 40px 20px 20px 20px; 
 }
 h3 {
     padding: 30px 15px 15px 15px;
@@ -187,5 +231,3 @@ p{
     display: block;
     margin: 0 auto;
 }
-
-        
