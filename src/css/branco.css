@@ -1,4 +1,4 @@
- body {
+  body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #fff;
             color: #333;
@@ -78,3 +78,13 @@
         .btn-inicio {
             color: #fff;
         }
+        /* Efeito de zoom ao passar o mouse sobre a imagem (scale) */
+        .harmonizacao img:hover {
+    transform: scale(1.2); 
+    transition: transform 0.3s ease;
+}
+/* Efeito ao passar o mouse sobre a imagem principal do vinho (translate e rotate) */
+.vinho-principal:hover {
+    transform: rotate(-3deg) translateY(-8px);
+    transition: transform 0.4s ease;
+}

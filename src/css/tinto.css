@@ -80,3 +80,14 @@ body {
         .btn-inicio {
             color: antiquewhite;
         }
+
+        /* Efeito de zoom ao passar o mouse sobre a imagem (scale) */
+        .harmonizacao img:hover {
+    transform: scale(1.2); /* aumenta 20% */
+    transition: transform 0.3s ease;
+}
+.vinho-img:hover {
+    transform: rotate(-3deg) translateY(-8px);
+    transition: transform 0.4s ease;
+}
+
