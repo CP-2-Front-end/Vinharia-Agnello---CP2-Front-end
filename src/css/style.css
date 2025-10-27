@@ -262,3 +262,9 @@ p{
     display: block;
     margin: 0 auto;
 }
+
+#grad {
+    background: #873E26;
+    background: linear-gradient(90deg, rgba(135, 62, 38, 1) 0%, rgba(204, 196, 182, 1) 50%, rgba(135, 62, 38, 1) 100%);
+}
+

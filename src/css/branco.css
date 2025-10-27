@@ -88,3 +88,8 @@
     transform: rotate(-3deg) translateY(-8px);
     transition: transform 0.4s ease;
 }
+
+#gradB {
+    background: #595353;
+    background: linear-gradient(90deg, rgba(89, 83, 83, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(89, 83, 83, 1) 100%);
+}
