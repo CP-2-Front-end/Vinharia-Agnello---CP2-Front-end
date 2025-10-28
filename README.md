@@ -35,6 +35,13 @@ Além disso, cada página de produto conta com um botão “Início”, posicion
 
 ---
 
+# Estilizações
+
+As estilizações aplicadas neste projeto tiveram como objetivo tornar a navegação mais agradável e dinâmica, explorando recursos visuais do CSS3. Foram implementados efeitos de transição e animação em diversos elementos da interface, como botões e imagens de vinhos, que reagem ao movimento do cursor, criando levezas sutis, como aumento, deslocamento lateral e retorno suave ao estado inicial.
+Além disso, a página inicial e algumas outras receberam um novo plano de fundo em degradê, desenvolvido com "linear-gradient", que cria uma transição de tons da direita para a esquerda, remetendo à estética sofisticada e acolhedora do universo dos vinhos. Essas alterações visam valorizar a experiência do usuário e destacar o cuidado visual na apresentação do site.
+
+---
+
 # Tecnologias Utilizadas
 
 ## HTML5: 
